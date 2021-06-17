@@ -116,7 +116,7 @@ class App extends React.Component {
 
   renderRowClass = (record, index) => {
     if(record.type==='小计') {
-      return 'row-enable'
+      return 'table-row-enable'
     }
   }
 
@@ -201,6 +201,10 @@ const EditableCell = ({
   }, [editing]);
 
   const toggleEdit = () => {
+    console.log(record)
+    if(record.type==='35') {
+      return;
+    }
     setEditing(!editing);
     form.setFieldsValue({
       [dataIndex]: record[dataIndex],
@@ -227,7 +231,7 @@ const EditableCell = ({
         }}
         name={dataIndex}
       >
-        <Input style={{ width: '100%' }} ref={inputRef} onPressEnter={save} onBlur={save} />
+        <Input style={{ width: '100%'}} ref={inputRef} onPressEnter={save} onBlur={save} />
       </Form.Item>
     ) : (
       <div

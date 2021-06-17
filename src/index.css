@@ -15,17 +15,21 @@ code {
 }
 
 .back-color {
-  background-color: #ffceee;
+  background: #ffceee!important;
 }
 
 .back-color1 {
-  background-color: #ceffef;
+  background: #ceffef!important;
 }
 
 .back-color2 {
-  background-color: #fff8ce;
+  background: #fff8ce!important;
 }
 
-.row-enable {
+.table-row-enable {
   color: #918e8e;
+}
+.ant-row .ant-form-item {
+  padding: 0;
+  margin: 0;
 }
