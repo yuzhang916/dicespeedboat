@@ -86,7 +86,7 @@ class App extends React.Component {
     let data = this.state.data;
     let xixi = 0, mother = 0, father = 0;
     for(let item of data) {
-      if(item.type === '小计' ) {
+      if(item.type === '小计' || item.type === '总计') {
         continue;
       }
       xixi += item.xixi?parseInt(item.xixi):0
@@ -206,6 +206,12 @@ const EditableCell = ({
       return;
     }
     setEditing(!editing);
+    if(record.type==='小顺') {
+      record[dataIndex] = 15
+    }
+    if(record.type==='大顺') {
+      record[dataIndex] = 30
+    }
     form.setFieldsValue({
       [dataIndex]: record[dataIndex],
     });
