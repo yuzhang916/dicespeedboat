@@ -74,9 +74,21 @@ class App extends React.Component {
         item.father = father
       }
       if(item.type === '35') {
-        if(xixi>=63) item.xixi = 35
-        if(mother>=63) item.mother = 35
-        if(father>=63) item.father = 35
+        if(xixi>=63) {
+          item.xixi = 35
+        } else {
+          item.xixi = 0
+        }
+        if(mother>=63) {
+          item.mother = 35
+        } else {
+          item.mother = 0
+        }
+        if(father>=63) {
+          item.father = 35
+        } else {
+          item.father = 0
+        }
       }
     }
     this.setState({data})
